@@ -1,25 +1,36 @@
 <style>
-
+body{color:#f00;}
 </style>
 
 <template>
   <div>
-    <h1>node.js+express+mysql+webpack+vue+axios多页面开发</h1>
-    <h2>前后端完全分离，利用axios与后端进行数据交互</h2>
-    <h3>开发完成，利用webpack进行打包编译后，只需把webpages文件夹与webstatics文件夹放到服务器相应目录，然后即可访问</h3>
+    <h1>首页--导航与API接口测试</h1>
+    <h2 class="basecolor">引入样式</h2>
+    <h3>API接口数据</h3>
     <pre v-if="getData!=null">
         {{getData}}
     </pre>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="echarts.html">引入echarts图表</a></li>
+        <li><a href="eleui.html">引入Element UI</a></li>
+        <li><a href="iviewui.html">引入iView UI</a></li>
+    </ul>
+    <aaa-a></aaa-a>
   </div>
 </template>
 
 <script>
+require('../../statics/css/base.css');
+import aaaA from '../../components/A/A.vue'
 export default {
     data () {
         return {
             getData:null
         }
-
+    },
+    components:{
+        aaaA
     },
     created(){
         var _this=this;

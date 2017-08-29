@@ -67,9 +67,9 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)$/,
         // 图片加载器，较小的图片转成base64
-        loader: 'url',
+        loader: 'url-loader',
         query: {
           limit: 10000,
           name: './imgs/[name].[ext]?[hash:7]'
@@ -97,7 +97,7 @@ module.exports = {
   ],
   devServer: {
       host: 'localhost',
-      port: 8099,
+      port: 8080,
       //subDirectory:'static',
       //publicPath:'/',
       proxy: {

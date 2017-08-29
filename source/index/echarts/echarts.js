@@ -3,7 +3,7 @@ import vueAxios from 'axios';
 import App from './app';
 
 Vue.prototype.$axios = vueAxios
+
 new Vue({
-  el: '#app',
-  components: { App }
-})
+    render: h => h(App)
+}).$mount('#vueMountApp');
